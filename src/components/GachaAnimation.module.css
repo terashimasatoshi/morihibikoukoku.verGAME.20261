@@ -1,0 +1,348 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: radial-gradient(circle at center, #F2EFE9 0%, var(--color-background) 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+.capsuleContainer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 0.5s infinite alternate ease-in-out;
+    z-index: 10;
+}
+
+.containerOpening {
+    animation: none;
+    /* Stop bouncing when opening */
+}
+
+.capsule {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Shaking animation applied to capsule when not opening */
+.capsule:not(.capsuleOpening) {
+    animation: shake 0.5s infinite;
+}
+
+.capTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: var(--color-primary);
+    border-radius: 60px 60px 0 0;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 5;
+}
+
+.capBottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: var(--color-white);
+    border-radius: 0 0 60px 60px;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 5;
+}
+
+.capTopOpen {
+    transform: translateY(-60px) rotate(-10deg);
+}
+
+.capBottomOpen {
+    transform: translateY(60px) rotate(10deg);
+}
+
+.shine {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    z-index: 6;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.capsuleOpening .shine {
+    opacity: 0;
+}
+
+.innerLight {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #FFF 20%, #FFD700 60%, transparent 80%);
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.innerLightActive {
+    animation: burst 1.5s forwards;
+}
+
+.shadow {
+    position: absolute;
+    bottom: 20px;
+    width: 80px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    animation: shadowScale 0.5s infinite alternate ease-in-out;
+    z-index: 1;
+}
+
+.text {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+    z-index: 10;
+    transition: opacity 0.5s;
+}
+
+.textFadeOut {
+    opacity: 0;
+}
+
+/* Rays / God beams */
+.rays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: repeating-conic-gradient(from 0deg,
+            rgba(255, 215, 0, 0.2) 0deg 10deg,
+            transparent 10deg 20deg);
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.raysActive {
+    width: 200vmax;
+    height: 200vmax;
+    opacity: 1;
+    animation: rotateRays 10s linear infinite, fadeInRays 0.5s forwards;
+}
+
+/* Whiteout */
+.whiteout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.whiteoutActive {
+    animation: whiteoutAnim 1.5s forwards;
+}
+
+/* Animations */
+@keyframes shake {
+    0% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+
+    25% {
+        transform: rotate(-5deg) translate(-2px, 0);
+    }
+
+    50% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+
+    75% {
+        transform: rotate(5deg) translate(2px, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shadowScale {
+    0% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+
+    100% {
+        transform: scale(0.8);
+        opacity: 0.05;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes burst {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(5);
+        opacity: 0;
+    }
+}
+
+@keyframes rotateRays {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes fadeInRays {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes whiteoutAnim {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Sparkles */
+.sparkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.sparkles span {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: sparkle 1.5s infinite;
+}
+
+.sparkles span:nth-child(1) {
+    top: -20%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.sparkles span:nth-child(2) {
+    top: 20%;
+    right: -10%;
+    animation-delay: 0.5s;
+}
+
+.sparkles span:nth-child(3) {
+    bottom: -10%;
+    left: 10%;
+    animation-delay: 1s;
+}
+
+.burstParticle {
+    top: 50%;
+    left: 50%;
+    animation: particleBurst 1s ease-out forwards !important;
+}
+
+.burstParticle:nth-child(4) {
+    --angle: 45deg;
+}
+
+.burstParticle:nth-child(5) {
+    --angle: 135deg;
+}
+
+.burstParticle:nth-child(6) {
+    --angle: 225deg;
+}
+
+.burstParticle:nth-child(7) {
+    --angle: 315deg;
+}
+
+@keyframes particleBurst {
+    0% {
+        transform: translate(-50%, -50%) rotate(var(--angle)) translateY(0) scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(var(--angle)) translateY(200px) scale(1.5);
+        opacity: 0;
+    }
+}

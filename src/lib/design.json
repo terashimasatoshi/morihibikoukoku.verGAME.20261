@@ -1,0 +1,783 @@
+{
+    "tags": [
+        {
+            "id": "sleep_quality",
+            "label": "睡眠の質",
+            "category": "concern",
+            "description": "寝つきが悪い、眠りが浅い",
+            "synonyms": [
+                "不眠",
+                "寝不足"
+            ]
+        },
+        {
+            "id": "eye_strain",
+            "label": "目の疲れ",
+            "category": "concern",
+            "description": "スマホ・PCによる眼精疲労",
+            "synonyms": [
+                "かすみ目",
+                "重たい"
+            ]
+        },
+        {
+            "id": "scalp_stiffness",
+            "label": "頭皮の硬さ",
+            "category": "scalp",
+            "description": "頭皮が動かない、突っ張る",
+            "synonyms": [
+                "凝り",
+                "張り"
+            ]
+        },
+        {
+            "id": "scalp_dryness",
+            "label": "頭皮の乾燥",
+            "category": "scalp",
+            "description": "フケやかゆみがある",
+            "synonyms": [
+                "カサカサ"
+            ]
+        },
+        {
+            "id": "scalp_oily",
+            "label": "頭皮のベタつき",
+            "category": "scalp",
+            "description": "夕方になるとベタつく",
+            "synonyms": [
+                "ニオイ",
+                "脂っぽい"
+            ]
+        },
+        {
+            "id": "hair_damage",
+            "label": "髪のダメージ",
+            "category": "hair",
+            "description": "パサつき、切れ毛",
+            "synonyms": [
+                "傷み"
+            ]
+        },
+        {
+            "id": "hair_aging",
+            "label": "エイジング毛",
+            "category": "hair",
+            "description": "ハリコシ不足、うねり",
+            "synonyms": [
+                "細毛"
+            ]
+        },
+        {
+            "id": "neck_shoulder_stiffness",
+            "label": "首肩こり",
+            "category": "concern",
+            "description": "首や肩が重い",
+            "synonyms": [
+                "肩こり"
+            ]
+        },
+        {
+            "id": "stress_high",
+            "label": "ストレス過多",
+            "category": "mind_body",
+            "description": "イライラ、緊張が抜けない",
+            "synonyms": [
+                "気疲れ"
+            ]
+        },
+        {
+            "id": "cold_sensitivity",
+            "label": "冷え",
+            "category": "mind_body",
+            "description": "手足や頭が冷える",
+            "synonyms": [
+                "冷え性"
+            ]
+        },
+        {
+            "id": "gray_hair",
+            "label": "白髪",
+            "category": "hair",
+            "description": "白髪が気になる",
+            "synonyms": []
+        },
+        {
+            "id": "face_care",
+            "label": "顔のケア",
+            "category": "concern",
+            "description": "肌の調子も整えたい",
+            "synonyms": [
+                "美肌"
+            ]
+        },
+        {
+            "id": "time_short",
+            "label": "時短",
+            "category": "duration",
+            "description": "あまり時間がない",
+            "synonyms": [
+                "急ぎ"
+            ]
+        },
+        {
+            "id": "time_long",
+            "label": "じっくり",
+            "category": "duration",
+            "description": "時間をかけて癒されたい",
+            "synonyms": [
+                "ロング"
+            ]
+        },
+        {
+            "id": "tech_carbonated",
+            "label": "炭酸泉",
+            "category": "technique",
+            "description": "汚れ除去と血行促進",
+            "synonyms": []
+        },
+        {
+            "id": "tech_hydrogen",
+            "label": "水素",
+            "category": "technique",
+            "description": "活性酸素除去",
+            "synonyms": []
+        },
+        {
+            "id": "tech_ayurveda",
+            "label": "アーユルヴェーダ",
+            "category": "technique",
+            "description": "オイルマッサージ",
+            "synonyms": []
+        },
+        {
+            "id": "tech_hair_improvement",
+            "label": "髪質改善",
+            "category": "technique",
+            "description": "トリートメント重視",
+            "synonyms": []
+        }
+    ],
+    "menu_tagging": [
+        {
+            "menu_id": "mori_shinmin_60",
+            "menu_name": "森の深眠60分コース",
+            "tags": [
+                "sleep_quality",
+                "stress_high",
+                "tech_hydrogen",
+                "time_short"
+            ],
+            "key_reasons": [
+                "短時間で深いリラックスへ",
+                "水素で頭皮の酸化ケア",
+                "睡眠不足の方に最適"
+            ],
+            "constraints": {}
+        },
+        {
+            "menu_id": "mori_shinmin_90",
+            "menu_name": "森の深眠90分コース",
+            "tags": [
+                "sleep_quality",
+                "stress_high",
+                "scalp_stiffness",
+                "tech_hydrogen",
+                "time_long"
+            ],
+            "key_reasons": [
+                "たっぷり90分で脳疲労をリセット",
+                "頭浸浴が長めで深部まで温まる",
+                "自律神経を整えたい方に"
+            ],
+            "constraints": {}
+        },
+        {
+            "menu_id": "mori_shinmin_90_extra",
+            "menu_name": "森の深眠90分コース|extra|",
+            "tags": [
+                "sleep_quality",
+                "face_care",
+                "stress_high",
+                "tech_hydrogen",
+                "time_long"
+            ],
+            "key_reasons": [
+                "ヘッドスパと同時にお顔のケアも",
+                "ララピールで肌のターンオーバー促進",
+                "全身のご褒美に"
+            ],
+            "constraints": {}
+        },
+        {
+            "menu_id": "mori_tansan_60",
+            "menu_name": "森の炭酸60分コース",
+            "tags": [
+                "scalp_oily",
+                "scalp_stiffness",
+                "tech_carbonated",
+                "tech_hydrogen",
+                "time_short"
+            ],
+            "key_reasons": [
+                "炭酸泉で毛穴汚れをスッキリ除去",
+                "ベタつきやニオイが気になる方に",
+                "血行促進で頭皮を柔軟に"
+            ],
+            "constraints": {}
+        },
+        {
+            "menu_id": "tansan_ayur_90",
+            "menu_name": "炭酸アーユル90",
+            "tags": [
+                "scalp_oily",
+                "stress_high",
+                "tech_carbonated",
+                "tech_ayurveda",
+                "time_long"
+            ],
+            "key_reasons": [
+                "炭酸とオイルの相乗効果",
+                "アーユルヴェーダで深いデトックス",
+                "頭皮環境を根本から整える"
+            ],
+            "constraints": {}
+        },
+        {
+            "menu_id": "deep_sleep_60",
+            "menu_name": "ディープスリープ60",
+            "tags": [
+                "hair_damage",
+                "hair_aging",
+                "tech_hair_improvement",
+                "time_short"
+            ],
+            "key_reasons": [
+                "髪質改善トリートメントで艶髪へ",
+                "短時間でもしっかりケア",
+                "パサつきが気になる方に"
+            ],
+            "constraints": {}
+        },
+        {
+            "menu_id": "deep_sleep_90",
+            "menu_name": "ディープスリープ90",
+            "tags": [
+                "hair_damage",
+                "hair_aging",
+                "sleep_quality",
+                "tech_hair_improvement",
+                "time_long"
+            ],
+            "key_reasons": [
+                "スパとトリートメントのバランスが良い",
+                "髪の補修とリラックスを両立",
+                "エイジング毛のケアに"
+            ],
+            "constraints": {}
+        },
+        {
+            "menu_id": "deep_sleep_120",
+            "menu_name": "ディープスリープ120",
+            "tags": [
+                "neck_shoulder_stiffness",
+                "hair_damage",
+                "stress_high",
+                "tech_hair_improvement",
+                "time_long"
+            ],
+            "key_reasons": [
+                "デコルテケア付きで首肩もスッキリ",
+                "120分の贅沢コース",
+                "全身の疲れと髪の悩みを一気に解消"
+            ],
+            "constraints": {
+                "price_note": "要問い合わせ"
+            }
+        },
+        {
+            "menu_id": "fusion_120",
+            "menu_name": "フュージョン120",
+            "tags": [
+                "scalp_oily",
+                "hair_damage",
+                "tech_carbonated",
+                "tech_ayurveda",
+                "tech_hair_improvement",
+                "time_long"
+            ],
+            "key_reasons": [
+                "全ての技術を詰め込んだ最上級コース",
+                "頭皮も髪も心も満たされる",
+                "迷ったらこれを選べば間違いなし"
+            ],
+            "constraints": {}
+        },
+        {
+            "menu_id": "root_color",
+            "menu_name": "根元カラー（２cm以内）",
+            "tags": [
+                "gray_hair"
+            ],
+            "key_reasons": [
+                "気になる白髪をメンテナンス",
+                "スパと一緒に時短で染める"
+            ],
+            "constraints": {
+                "requires_spa_with": true,
+                "requires_staff": "山崎"
+            }
+        },
+        {
+            "menu_id": "dry_yamazaki",
+            "menu_name": "ドライ（山崎のみ）",
+            "tags": [],
+            "key_reasons": [],
+            "constraints": {
+                "requires_staff": "山崎"
+            }
+        },
+        {
+            "menu_id": "lala_peel_face",
+            "menu_name": "ララピール（フェイス）",
+            "tags": [
+                "face_care"
+            ],
+            "key_reasons": [
+                "肌の角質ケア",
+                "ダウンタイムなしでツヤ肌へ"
+            ],
+            "constraints": {}
+        },
+        {
+            "menu_id": "hot_spa_addon",
+            "menu_name": "ホットスパ",
+            "tags": [
+                "cold_sensitivity",
+                "eye_strain",
+                "stress_high"
+            ],
+            "key_reasons": [
+                "温めながらのスパで血行促進",
+                "目の疲れや冷えに効果的"
+            ],
+            "constraints": {
+                "add_on_only": true
+            }
+        }
+    ],
+    "animal_types": [
+        {
+            "id": "sleepy_koala",
+            "name": "ねむねむコアラちゃん",
+            "emoji": "🐨",
+            "catchphrase": "お疲れモード全開",
+            "core_signs": [
+                "寝ても眠い",
+                "やる気が出ない",
+                "頭が重い"
+            ],
+            "recommended": {
+                "primary_menus": [
+                    "森の深眠90分コース",
+                    "森の深眠60分コース"
+                ],
+                "add_ons": [
+                    "ホットスパ"
+                ],
+                "optional": []
+            },
+            "one_line_advice": "今は無理せず、たっぷりの睡眠と休息を自分に許してあげましょう。"
+        },
+        {
+            "id": "stiff_hedgehog",
+            "name": "カチコチハリネズミちゃん",
+            "emoji": "🦔",
+            "catchphrase": "緊張でトゲトゲ？",
+            "core_signs": [
+                "首肩がガチガチ",
+                "歯を食いしばる",
+                "リラックス下手"
+            ],
+            "recommended": {
+                "primary_menus": [
+                    "ディープスリープ120",
+                    "森の深眠90分コース"
+                ],
+                "add_ons": [
+                    "ホットスパ"
+                ],
+                "optional": []
+            },
+            "one_line_advice": "深呼吸を意識して、体の力を抜く時間を1日5分でも作りましょう。"
+        },
+        {
+            "id": "digital_owl",
+            "name": "デジタルフクロウちゃん",
+            "emoji": "🦉",
+            "catchphrase": "画面の見過ぎ注意",
+            "core_signs": [
+                "目がショボショボ",
+                "夜更かし気味",
+                "頭痛がする"
+            ],
+            "recommended": {
+                "primary_menus": [
+                    "森の深眠60分コース",
+                    "ホットスパ"
+                ],
+                "add_ons": [
+                    "ホットスパ"
+                ],
+                "optional": []
+            },
+            "one_line_advice": "寝る1時間前はスマホを置いて、目と脳を休めるデジタルデトックスを。"
+        },
+        {
+            "id": "sensitive_rabbit",
+            "name": "デリケートうさぎちゃん",
+            "emoji": "🐰",
+            "catchphrase": "変化に敏感かも",
+            "core_signs": [
+                "頭皮が乾燥する",
+                "髪がパサつく",
+                "季節の変わり目に弱い"
+            ],
+            "recommended": {
+                "primary_menus": [
+                    "ディープスリープ90",
+                    "ディープスリープ60"
+                ],
+                "add_ons": [],
+                "optional": []
+            },
+            "one_line_advice": "保湿ケアを大切に。ぬるめのお湯でゆっくり入浴するのがおすすめです。"
+        },
+        {
+            "id": "oily_bear",
+            "name": "オイリーくまちゃん",
+            "emoji": "🐻",
+            "catchphrase": "溜め込み注意報",
+            "core_signs": [
+                "頭皮がベタつく",
+                "スッキリしたい",
+                "食生活が乱れ気味"
+            ],
+            "recommended": {
+                "primary_menus": [
+                    "森の炭酸60分コース",
+                    "炭酸アーユル90"
+                ],
+                "add_ons": [],
+                "optional": []
+            },
+            "one_line_advice": "揚げ物を控えて、頭皮クレンジングで毛穴の大掃除をしましょう。"
+        },
+        {
+            "id": "elegant_cat",
+            "name": "気まぐれ猫ちゃん",
+            "emoji": "🐱",
+            "catchphrase": "美意識高めモード",
+            "core_signs": [
+                "髪をきれいにしたい",
+                "白髪が気になる",
+                "自分磨きが好き"
+            ],
+            "recommended": {
+                "primary_menus": [
+                    "フュージョン120",
+                    "森の深眠90分コース|extra|"
+                ],
+                "add_ons": [
+                    "ララピール（フェイス）"
+                ],
+                "optional": [
+                    "根元カラー（２cm以内）"
+                ]
+            },
+            "one_line_advice": "トータルケアで自信をチャージ。新しい美容習慣を取り入れてみては？"
+        }
+    ],
+    "question_bank": [
+        {
+            "id": "q1",
+            "question": "最近、睡眠の質はどうですか？",
+            "type": "single_choice",
+            "options": [
+                {
+                    "label": "ぐっすり眠れている",
+                    "value": "good"
+                },
+                {
+                    "label": "寝つきが悪い・途中で起きる",
+                    "value": "poor"
+                },
+                {
+                    "label": "寝ても疲れが取れない",
+                    "value": "tired"
+                }
+            ],
+            "scoring": {
+                "good": {},
+                "poor": {
+                    "sleep_quality": 3,
+                    "stress_high": 1
+                },
+                "tired": {
+                    "sleep_quality": 2,
+                    "stress_high": 2,
+                    "sleepy_koala": 2
+                }
+            }
+        },
+        {
+            "id": "q2",
+            "question": "目の疲れを感じますか？",
+            "type": "single_choice",
+            "options": [
+                {
+                    "label": "特に感じない",
+                    "value": "none"
+                },
+                {
+                    "label": "スマホ・PC作業で疲れる",
+                    "value": "digital"
+                },
+                {
+                    "label": "常に重たい感じがする",
+                    "value": "chronic"
+                }
+            ],
+            "scoring": {
+                "none": {},
+                "digital": {
+                    "eye_strain": 2,
+                    "digital_owl": 2
+                },
+                "chronic": {
+                    "eye_strain": 3,
+                    "neck_shoulder_stiffness": 1,
+                    "digital_owl": 3
+                }
+            }
+        },
+        {
+            "id": "q3",
+            "question": "頭皮の状態はいかがですか？",
+            "type": "single_choice",
+            "options": [
+                {
+                    "label": "特に気にならない",
+                    "value": "normal"
+                },
+                {
+                    "label": "乾燥やかゆみがある",
+                    "value": "dry"
+                },
+                {
+                    "label": "ベタつきやニオイが気になる",
+                    "value": "oily"
+                },
+                {
+                    "label": "硬くて動かない気がする",
+                    "value": "stiff"
+                }
+            ],
+            "scoring": {
+                "normal": {},
+                "dry": {
+                    "scalp_dryness": 3,
+                    "sensitive_rabbit": 3
+                },
+                "oily": {
+                    "scalp_oily": 3,
+                    "oily_bear": 3
+                },
+                "stiff": {
+                    "scalp_stiffness": 3,
+                    "stiff_hedgehog": 2
+                }
+            }
+        },
+        {
+            "id": "q4",
+            "question": "髪の悩みはありますか？（複数選択可）",
+            "type": "multi_choice",
+            "options": [
+                {
+                    "label": "特にない",
+                    "value": "none"
+                },
+                {
+                    "label": "パサつき・ダメージ",
+                    "value": "damage"
+                },
+                {
+                    "label": "ハリコシがない",
+                    "value": "aging"
+                },
+                {
+                    "label": "白髪が気になる",
+                    "value": "gray"
+                }
+            ],
+            "scoring": {
+                "none": {},
+                "damage": {
+                    "hair_damage": 3,
+                    "sensitive_rabbit": 1
+                },
+                "aging": {
+                    "hair_aging": 3,
+                    "elegant_cat": 1
+                },
+                "gray": {
+                    "gray_hair": 3,
+                    "elegant_cat": 2
+                }
+            }
+        },
+        {
+            "id": "q5",
+            "question": "首や肩の凝りはありますか？",
+            "type": "single_choice",
+            "options": [
+                {
+                    "label": "気にならない",
+                    "value": "none"
+                },
+                {
+                    "label": "時々気になる",
+                    "value": "mild"
+                },
+                {
+                    "label": "常にガチガチで辛い",
+                    "value": "severe"
+                }
+            ],
+            "scoring": {
+                "none": {},
+                "mild": {
+                    "neck_shoulder_stiffness": 1
+                },
+                "severe": {
+                    "neck_shoulder_stiffness": 3,
+                    "stiff_hedgehog": 3
+                }
+            }
+        },
+        {
+            "id": "q6",
+            "question": "日々のストレスレベルは？",
+            "type": "slider_0_10",
+            "options": {
+                "min": 0,
+                "max": 10,
+                "labels": [
+                    "なし",
+                    "MAX"
+                ]
+            },
+            "scoring": {
+                "high": {
+                    "stress_high": 3,
+                    "sleepy_koala": 1
+                },
+                "mid": {
+                    "stress_high": 1
+                }
+            }
+        },
+        {
+            "id": "q7",
+            "question": "冷えを感じることはありますか？",
+            "type": "single_choice",
+            "options": [
+                {
+                    "label": "ない",
+                    "value": "no"
+                },
+                {
+                    "label": "手足が冷える",
+                    "value": "yes"
+                }
+            ],
+            "scoring": {
+                "no": {},
+                "yes": {
+                    "cold_sensitivity": 3
+                }
+            }
+        },
+        {
+            "id": "q8",
+            "question": "お顔のケアにも興味がありますか？",
+            "type": "single_choice",
+            "options": [
+                {
+                    "label": "興味ない",
+                    "value": "no"
+                },
+                {
+                    "label": "興味がある",
+                    "value": "yes"
+                }
+            ],
+            "scoring": {
+                "no": {},
+                "yes": {
+                    "face_care": 3,
+                    "elegant_cat": 1
+                }
+            }
+        },
+        {
+            "id": "q9",
+            "question": "今回のメニューのご希望時間は？",
+            "type": "single_choice",
+            "options": [
+                {
+                    "label": "サクッと60分くらい",
+                    "value": "short"
+                },
+                {
+                    "label": "じっくり90分以上",
+                    "value": "long"
+                },
+                {
+                    "label": "おまかせ",
+                    "value": "any"
+                }
+            ],
+            "scoring": {
+                "short": {
+                    "time_short": 5
+                },
+                "long": {
+                    "time_long": 5
+                },
+                "any": {}
+            }
+        }
+    ],
+    "routing_rules": {
+        "tag_weighting": {
+            "sleep_quality": 2,
+            "eye_strain": 2,
+            "scalp_stiffness": 2,
+            "scalp_oily": 2,
+            "hair_damage": 2,
+            "neck_shoulder_stiffness": 2,
+            "stress_high": 1,
+            "time_short": 3,
+            "time_long": 3
+        },
+        "menu_scoring": "Calculate score for each menu: Sum of (Tag Weight * 1 if menu has tag else 0). Filter by constraints (e.g., if time_short is selected, penalize long menus). Sort by score descending.",
+        "tie_breakers": "If scores are equal, prefer '森の深眠' series as default. If 'neck_shoulder_stiffness' is high, prefer 'Deep Sleep 120'.",
+        "add_on_rules": {
+            "hot_spa_addon": "Suggest if 'cold_sensitivity' > 0 or 'eye_strain' > 0",
+            "lala_peel_face": "Suggest if 'face_care' > 0",
+            "root_color": "Suggest if 'gray_hair' > 0"
+        },
+        "safety_copy": "※本診断は医療行為ではありません。体調に合わせてメニューをご提案します。"
+    }
+}

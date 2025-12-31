@@ -1,0 +1,48 @@
+.main {
+  background: linear-gradient(180deg, var(--color-background) 0%, #E8F3F1 100%);
+  min-height: 100vh;
+}
+
+.content {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-light);
+}
+
+.action {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  margin-top: auto;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  opacity: 0.6;
+}
