@@ -15,8 +15,18 @@ export interface DiagnosisResult {
     personalityDescription?: string;
 }
 
+const STATIC_DESCRIPTIONS: Record<string, string> = {
+    "sleepy_koala": "あなたは、少しお疲れモードの「ねむねむコアラちゃん」タイプかも？日々の頑張りで、心も体も休息を求めているようです。",
+    "stiff_hedgehog": "あなたは、緊張が続いている「カチコチハリネズミちゃん」タイプかも？責任感が強く、知らず知らずのうちに体に力が入ってしまっているようです。",
+    "digital_owl": "あなたは、情報の海を泳ぐ「デジタルフクロウちゃん」タイプかも？知的好奇心が旺盛ですが、目や頭を使いすぎて少しオーバーヒート気味かもしれません。",
+    "sensitive_rabbit": "あなたは、繊細な感性を持つ「デリケートうさぎちゃん」タイプかも？季節や環境の変化を敏感に感じ取り、少し心細くなっているかもしれません。",
+    "oily_bear": "あなたは、溜め込みがちな「オイリーくまちゃん」タイプかも？忙しさからケアが後回しになり、スッキリしたい欲求が高まっているようです。",
+    "elegant_cat": "あなたは、美意識が高い「気まぐれ猫ちゃん」タイプかも？自分磨きを楽しむ余裕を持ちつつも、さらなる美しさを追求しているようです。"
+};
+
 // Rule-based logic (moved from client-side diagnosis.ts)
 function calculateRuleBasedResult(answers: Record<string, any>): DiagnosisResult {
+    // ... (existing scoring logic) ...
     // 1. Calculate Scores (Tags & Animals)
     const tagScores: Record<string, number> = {};
     const animalScores: Record<string, number> = {};
@@ -123,7 +133,8 @@ function calculateRuleBasedResult(answers: Record<string, any>): DiagnosisResult
         primaryMenu,
         secondaryMenu,
         addOns,
-        advice: bestAnimal.one_line_advice
+        advice: bestAnimal.one_line_advice,
+        personalityDescription: STATIC_DESCRIPTIONS[bestAnimal.id]
     };
 }
 
@@ -133,10 +144,7 @@ export async function diagnoseUserAction(answers: Record<string, any>): Promise<
 
     if (!apiKey) {
         console.log('No Gemini API Key found, using rule-based advice.');
-        return {
-            ...baseResult,
-            personalityDescription: "（サンプル）あなたは森の木々のように、静かで芯の強いタイプかもしれません。日々の喧騒の中で、少し自分の根っこを休める時間が必要そうです。"
-        };
+        return baseResult;
     }
 
     try {
@@ -177,7 +185,9 @@ export async function diagnoseUserAction(answers: Record<string, any>): Promise<
 
         if (text) {
             try {
-                const json = JSON.parse(text);
+                // Clean up markdown code blocks if present
+                const cleanedText = text.replace(/```json\n?|\n?```/g, '').trim();
+                const json = JSON.parse(cleanedText);
                 return {
                     ...baseResult,
                     advice: json.advice,
@@ -185,11 +195,10 @@ export async function diagnoseUserAction(answers: Record<string, any>): Promise<
                 };
             } catch (e) {
                 console.error('Failed to parse Gemini JSON', e);
-                // Fallback if JSON parsing fails but we have text (unlikely with responseMimeType but possible)
-                return {
-                    ...baseResult,
-                    advice: text // Might be raw JSON string if parse failed, but better than nothing or maybe just fallback to base
-                };
+                // Fallback if JSON parsing fails but we have text
+                // If parsing fails, we keep the static personalityDescription from baseResult
+                // and maybe try to use text as advice if it looks like text, but safer to stick to baseResult or just log
+                return baseResult;
             }
         }
     } catch (error) {
