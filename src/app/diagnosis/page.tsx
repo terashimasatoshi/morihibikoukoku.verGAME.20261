@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import designData from '@/lib/design.json';
 import { diagnoseUserAction } from '@/app/actions';
@@ -14,6 +14,16 @@ const questions = designData.question_bank;
 export default function DiagnosisPage() {
     const router = useRouter();
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        // GTM: 質問ページのページビューイベント送信
+        if (typeof window !== 'undefined' && window.dataLayer) {
+            window.dataLayer.push({
+                event: 'page_view',
+                page_path: '/diagnosis',
+            });
+        }
+    }, []);
     const [answers, setAnswers] = useState<Record<string, any>>({});
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [currentAnswer, setCurrentAnswer] = useState<any>(undefined);

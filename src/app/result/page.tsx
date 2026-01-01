@@ -10,11 +10,27 @@ export default function ResultPage() {
     const [result, setResult] = useState<DiagnosisResult | null>(null);
 
     useEffect(() => {
-        const stored = localStorage.getItem('diagnosisResult');
-        if (stored) {
-            setResult(JSON.parse(stored));
+        // GTM: 結果ページのページビューイベント送信
+        if (typeof window !== 'undefined' && window.dataLayer) {
+            window.dataLayer.push({
+                event: 'page_view',
+                page_path: '/result',
+            });
         }
     }, []);
+
+    const handleReservation = (menuUrl: string) => {
+        // GTM: 予約ボタンクリックイベント送信（重要！コンバージョン計測）
+        if (typeof window !== 'undefined' && window.dataLayer) {
+            window.dataLayer.push({
+                event: 'click',
+                click_url: menuUrl,
+            });
+        }
+
+        // Hot Pepperへ遷移 (別タブで開く)
+        window.open(menuUrl, '_blank');
+    };
 
     if (!result) {
         return (
@@ -88,7 +104,7 @@ export default function ResultPage() {
                     )}
 
                     <div className={styles.actions}>
-                        <Button fullWidth onClick={() => window.open(primaryMenu.reservationUrl || 'https://beauty.hotpepper.jp/slnH000771707/', '_blank')}>
+                        <Button fullWidth onClick={() => handleReservation(primaryMenu.reservationUrl || 'https://beauty.hotpepper.jp/slnH000771707/')}>
                             このメニューを予約する
                         </Button>
                         <Link href="/diagnosis" passHref legacyBehavior>

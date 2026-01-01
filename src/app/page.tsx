@@ -1,8 +1,36 @@
-import Link from 'next/link';
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Button from '@/components/Button';
 import styles from './page.module.css';
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    // GTM: ページビューイベント送信
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'page_view',
+        page_path: '/',
+      });
+    }
+  }, []);
+
+  const handleStartDiagnosis = () => {
+    // GTM: 診断開始ボタンクリックイベント送信
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'click',
+        click_url: '/diagnosis',
+      });
+    }
+
+    // ページ遷移
+    router.push('/diagnosis');
+  };
+
   return (
     <main className={styles.main}>
       <div className={`container ${styles.content}`}>
@@ -17,9 +45,9 @@ export default function Home() {
         </div>
 
         <div className={styles.action}>
-          <Link href="/diagnosis" passHref legacyBehavior>
-            <Button fullWidth className="fade-in">診断をはじめる</Button>
-          </Link>
+          <Button fullWidth className="fade-in" onClick={handleStartDiagnosis}>
+            診断をはじめる
+          </Button>
         </div>
 
         <div className={styles.footer}>
