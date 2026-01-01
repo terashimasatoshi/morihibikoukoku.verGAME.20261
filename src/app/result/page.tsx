@@ -17,6 +17,14 @@ export default function ResultPage() {
                 page_path: '/result',
             });
         }
+        
+        // localStorageから診断結果を取得
+        if (typeof window !== 'undefined') {
+            const storedResult = localStorage.getItem('diagnosisResult');
+            if (storedResult) {
+                setResult(JSON.parse(storedResult));
+            }
+        }
     }, []);
 
     const handleReservation = (menuUrl: string) => {
