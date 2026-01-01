@@ -88,7 +88,7 @@ export default function ResultPage() {
                     )}
 
                     <div className={styles.actions}>
-                        <Button fullWidth onClick={() => window.open('https://beauty.hotpepper.jp/', '_blank')}>
+                        <Button fullWidth onClick={() => window.open(primaryMenu.reservationUrl || 'https://beauty.hotpepper.jp/slnH000771707/', '_blank')}>
                             このメニューを予約する
                         </Button>
                         <Link href="/diagnosis" passHref legacyBehavior>

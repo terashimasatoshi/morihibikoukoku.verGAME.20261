@@ -16,10 +16,10 @@ export interface MenuConstraints {
 export interface MenuTagging {
   menu_id: string;
   menu_name: string;
-  booking_url?: string;
   tags: string[];
   key_reasons: string[];
   constraints: MenuConstraints;
+  reservationUrl?: string;
 }
 
 export interface AnimalType {
