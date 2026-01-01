@@ -161,6 +161,7 @@
         {
             "menu_id": "mori_shinmin_60",
             "menu_name": "森の深眠60分コース",
+            "booking_url": "https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000771707&couponId=CP00000010590606&add=0&addMenu=0&rootCd=10",
             "tags": [
                 "sleep_quality",
                 "stress_high",
@@ -177,6 +178,7 @@
         {
             "menu_id": "mori_shinmin_90",
             "menu_name": "森の深眠90分コース",
+            "booking_url": "https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000771707&couponId=CP00000010590612&add=0&addMenu=0&rootCd=10",
             "tags": [
                 "sleep_quality",
                 "stress_high",
@@ -194,6 +196,7 @@
         {
             "menu_id": "mori_shinmin_90_extra",
             "menu_name": "森の深眠90分コース|extra|",
+            "booking_url": "https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000771707&couponId=CP00000010584701&add=0&addMenu=0&rootCd=10",
             "tags": [
                 "sleep_quality",
                 "face_care",
@@ -211,6 +214,7 @@
         {
             "menu_id": "mori_tansan_60",
             "menu_name": "森の炭酸60分コース",
+            "booking_url": "https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000771707&couponId=CP00000010590609&add=0&addMenu=0&rootCd=10",
             "tags": [
                 "scalp_oily",
                 "scalp_stiffness",
@@ -228,6 +232,7 @@
         {
             "menu_id": "tansan_ayur_90",
             "menu_name": "炭酸アーユル90",
+            "booking_url": "https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000771707&couponId=CP00000010590619&add=0&addMenu=0&rootCd=10",
             "tags": [
                 "scalp_oily",
                 "stress_high",
@@ -245,6 +250,7 @@
         {
             "menu_id": "deep_sleep_60",
             "menu_name": "ディープスリープ60",
+            "booking_url": "https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000771707&couponId=CP00000010748580&add=0&addMenu=0&rootCd=10",
             "tags": [
                 "hair_damage",
                 "hair_aging",
@@ -261,6 +267,7 @@
         {
             "menu_id": "deep_sleep_90",
             "menu_name": "ディープスリープ90",
+            "booking_url": "https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000771707&couponId=CP00000010542047&add=0&addMenu=0&rootCd=10",
             "tags": [
                 "hair_damage",
                 "hair_aging",
@@ -278,6 +285,7 @@
         {
             "menu_id": "deep_sleep_120",
             "menu_name": "ディープスリープ120",
+            "booking_url": "https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000771707&couponId=CP00000010542002&add=0&addMenu=0&rootCd=10",
             "tags": [
                 "neck_shoulder_stiffness",
                 "hair_damage",
